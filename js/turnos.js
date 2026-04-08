@@ -1,5 +1,6 @@
 (function () {
   const form = document.getElementById("turno-form");
+  const diaInput = document.getElementById("dia");
   const fechaInput = document.getElementById("fecha");
   const horaSelect = document.getElementById("hora");
   const estado = document.getElementById("estado");
@@ -7,6 +8,7 @@
   const nextMesBtn = document.getElementById("next-mes");
   const mesActual = document.getElementById("mes-actual");
   const calendarGrid = document.getElementById("calendar-grid");
+  const fechaSeleccionada = document.getElementById("fecha-seleccionada");
 
   const horarios = [
     "08:00", "08:30", "09:00", "09:30", "10:00", "10:30",
@@ -42,6 +44,22 @@
     return y + "-" + m + "-" + d;
   };
 
+  const actualizarTextoFecha = () => {
+    if (!fechaInput.value) {
+      fechaSeleccionada.textContent = "Fecha seleccionada: ninguna";
+      return;
+    }
+    const [y, m, d] = fechaInput.value.split("-").map(Number);
+    const date = new Date(y, m - 1, d);
+    const legible = new Intl.DateTimeFormat("es-AR", {
+      weekday: "long",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    }).format(date);
+    fechaSeleccionada.textContent = "Fecha seleccionada: " + legible;
+  };
+
   const renderCalendario = () => {
     const year = mesVista.getFullYear();
     const month = mesVista.getMonth();
@@ -63,13 +81,15 @@
     for (let day = 1; day <= total; day++) {
       const date = new Date(year, month, day);
       const iso = toISODate(date);
+      const dayOfWeek = date.getDay();
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "day-btn";
       btn.textContent = String(day);
       btn.dataset.date = iso;
 
-      if (iso < fechaInput.min) {
+      if (iso < fechaInput.min || isWeekend) {
         btn.disabled = true;
       }
       if (fechaInput.value === iso) {
@@ -77,8 +97,10 @@
       }
       btn.addEventListener("click", () => {
         fechaInput.value = iso;
+        diaInput.value = new Intl.DateTimeFormat("es-AR", { weekday: "long" }).format(date);
         cargarHorarios();
         renderCalendario();
+        actualizarTextoFecha();
       });
       calendarGrid.appendChild(btn);
     }
@@ -86,6 +108,7 @@
 
   fechaInput.addEventListener("change", cargarHorarios);
   fechaInput.addEventListener("change", renderCalendario);
+  fechaInput.addEventListener("change", actualizarTextoFecha);
   prevMesBtn.addEventListener("click", () => {
     mesVista = new Date(mesVista.getFullYear(), mesVista.getMonth() - 1, 1);
     renderCalendario();
@@ -97,18 +120,58 @@
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (!fechaInput.value) {
+      estado.textContent = "Selecciona una fecha en el calendario para continuar.";
+      estado.classList.add("error");
+      return;
+    }
     if (!form.checkValidity()) {
       estado.textContent = "Completa los campos obligatorios para continuar.";
       estado.classList.add("error");
       return;
     }
-    estado.textContent = "Solicitud enviada (maqueta). Te contactaremos para confirmar el turno.";
+
+    const data = new FormData(form);
+    const nombre = (data.get("nombre") || "").toString().trim();
+    const dni = (data.get("dni") || "").toString().trim();
+    const telefono = (data.get("telefono") || "").toString().trim();
+    const email = (data.get("email") || "").toString().trim();
+    const cobertura = (data.get("cobertura") || "").toString().trim();
+    const motivo = (data.get("motivo") || "").toString().trim();
+    const hora = (data.get("hora") || "").toString().trim();
+
+    const fechaLegible = fechaInput.value
+      ? new Intl.DateTimeFormat("es-AR", {
+          weekday: "long",
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        }).format(new Date(fechaInput.value + "T00:00:00"))
+      : "Sin fecha";
+
+    const mensaje = [
+      "Hola CODIL, quiero solicitar un turno.",
+      "",
+      "*Datos del paciente*",
+      "Nombre: " + nombre,
+      "DNI: " + dni,
+      "Telefono: " + telefono,
+      "Email: " + email,
+      "Cobertura: " + (cobertura || "Sin especificar"),
+      "",
+      "*Turno solicitado*",
+      "Fecha: " + fechaLegible,
+      "Hora: " + hora + " hs",
+      "Motivo: " + (motivo || "Sin especificar"),
+    ].join("\n");
+
+    const waUrl = "https://wa.me/5493815316345?text=" + encodeURIComponent(mensaje);
+    window.open(waUrl, "_blank", "noopener");
+
+    estado.textContent = "Se abrio WhatsApp con tu solicitud cargada.";
     estado.classList.remove("error");
-    form.reset();
-    cargarHorarios();
-    mesVista = new Date(hoy.getFullYear(), hoy.getMonth(), 1);
-    renderCalendario();
   });
 
   renderCalendario();
+  actualizarTextoFecha();
 })();

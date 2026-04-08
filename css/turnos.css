@@ -167,6 +167,13 @@ textarea {
   border-color: #111827;
 }
 
+.fecha-seleccionada {
+  margin: 10px 0 2px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .actions {
   display: flex;
   align-items: center;
