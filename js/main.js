@@ -27,22 +27,6 @@
   const modal = document.getElementById("obras-modal");
   const openModalBtn = document.getElementById("open-obras-modal");
   const closeModalBtn = document.getElementById("close-obras-modal");
-  const menuToggle = document.getElementById("menu-toggle");
-  const mainMenu = document.getElementById("main-menu");
-  if (menuToggle && mainMenu) {
-    const closeMenu = () => {
-      mainMenu.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    };
-    menuToggle.addEventListener("click", () => {
-      const isOpen = mainMenu.classList.toggle("is-open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-    mainMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-  }
-
   if (!modal || !openModalBtn || !closeModalBtn) return;
 
   const openModal = () => {
