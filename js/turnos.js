@@ -14,13 +14,6 @@
     "08:00", "08:30", "09:00", "09:30", "10:00", "10:30",
     "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00",
   ];
-  // Titulo para el tab de la pagina
-  const defaultTitle = document.title;
-  const hiddenTitles = [
-    "No te vayas, volve a conocernos | CODIL",
-    "Tu sonrisa te espera en CODIL",
-  ];
-  let titleInterval = null;
 
   const hoy = new Date();
   let mesVista = new Date(hoy.getFullYear(), hoy.getMonth(), 1);
@@ -177,24 +170,6 @@
 
     estado.textContent = "Se abrio WhatsApp con tu solicitud cargada.";
     estado.classList.remove("error");
-  });
-
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      let i = 0;
-      document.title = hiddenTitles[i];
-      titleInterval = window.setInterval(() => {
-        i = (i + 1) % hiddenTitles.length;
-        document.title = hiddenTitles[i];
-      }, 1000);
-      return;
-    }
-
-    if (titleInterval) {
-      window.clearInterval(titleInterval);
-      titleInterval = null;
-    }
-    document.title = defaultTitle;
   });
 
   renderCalendario();

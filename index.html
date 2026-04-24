@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CODIL | Centro Odontologico Integral Lencina</title>
+  <title>CODIL | Centro Odontológico Integral Lencina</title>
   <link rel="icon" type="image/png" href="images/codil_logo1.png">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/header-shared.css">
 </head>
-<header>
-  <div id="site-header"></div>
-</header>
+
 <body>
+  <div class="topbar">
+    <div class="container">
+      <div>Urgencias y turnos: <strong>(0381) 232-2272</strong></div>
+      <div>WhatsApp: <a
+          href="https://wa.me/5493815316345?text=Hola%20CODIL%2C%20quiero%20consultar%20por%20un%20turno.">
+          +54 9 381 531-63450 </a> | San Miguel de Tucumán</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-wrap">
+      <a class="brand" href="#inicio" aria-label="CODIL Inicio">
+        <img src="images/codil_logo.png" alt="Logo CODIL Centro Odontologico Integral Lencina">
+      </a>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"
+        aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div id="main-menu" class="header-menu">
+        <nav>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#coberturas">Coberturas</a>
+          <a href="#equipo">Equipo</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="social-links" aria-label="Redes sociales CODIL">
+          <a href="https://www.facebook.com/CODILTUC" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook CODIL">Facebook</a>
+          <a href="https://www.instagram.com/codiltuc/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram CODIL">Instagram</a>
+        </div>
+        <a href="turnos.html" class="btn btn-primary">Pedir turno</a>
+      </div>
+    </div>
+  </header>
+
   <main id="inicio" class="hero reveal">
     <div class="container hero-content">
       <section class="hero-panel reveal reveal-delay-1">
-        <div class="badge">Centro odontologico integral</div>
+        <!--  <div class="badge">Centro Odontológico Integral</div> -->
         <h1>Tu sonrisa en manos de profesionales</h1>
         <p>
-          Somos un centro odontologico comprometido con tu salud bucal, con atencion
-          personalizada, tecnologia moderna y resultados confiables para toda la familia.
+          Somos un centro odontológico comprometido con tu salud bucal, con atención
+          personalizada, tecnología moderna y resultados confiables para toda la familia.
         </p>
         <div class="actions">
           <a href="turnos.html" class="btn btn-primary hero-btn">Pedir turno</a>
           <a href="#servicios" class="btn btn-outline hero-btn-alt">Ver servicios</a>
         </div>
         <div class="stats hero-stats">
-          <div class="stat"><strong>15+</strong><span>Anos de experiencia</span></div>
+          <div class="stat"><strong>15+</strong><span>Años de experiencia</span></div>
           <div class="stat"><strong>8</strong><span>Especialidades activas</span></div>
-          <div class="stat"><strong>4.9</strong><span>Valoracion promedio</span></div>
+          <div class="stat"><strong>4.9</strong><span>Valoración promedio</span></div>
         </div>
       </section>
     </div>
@@ -37,29 +72,29 @@
   <section class="section reveal" id="servicios">
     <div class="container">
       <div class="section-head reveal">
-        <span class="badge">Servicios</span>
+        <!-- <span class="badge">Servicios</span> -->
         <h2>Especialidades para cada etapa de tu salud bucal</h2>
         <p>
-          Disenamos una experiencia simple para que el paciente encuentre rapidamente el tratamiento
+          Diseñamos una experiencia simple para que el paciente encuentre rapidamente el tratamiento
           que necesita, desde controles de rutina hasta procedimientos complejos.
         </p>
       </div>
       <div class="services-grid">
         <article class="card reveal reveal-delay-1">
-          <h3>Odontologia general</h3>
-          <p>Control clinico, diagnostico temprano y planes preventivos personalizados.</p>
+          <h3>Odontología general</h3>
+          <p>Control clínico, diagnóstico temprano y planes preventivos personalizados.</p>
         </article>
         <article class="card reveal reveal-delay-2">
           <h3>Ortodoncia</h3>
-          <p>Tratamientos tradicionales y alineadores para mejorar funcion y estetica.</p>
+          <p>Tratamientos tradicionales y alineadores para mejorar función y estetica.</p>
         </article>
         <article class="card reveal reveal-delay-3">
-          <h3>Implantologia</h3>
-          <p>Rehabilitacion oral con enfoque funcional y resultados naturales.</p>
+          <h3>Implantología</h3>
+          <p>Rehabilitación oral con enfoque funcional y resultados naturales.</p>
         </article>
         <article class="card reveal reveal-delay-4">
-          <h3>Odontopediatria</h3>
-          <p>Atencion amigable para ninos con acompanamiento profesional y cercano.</p>
+          <h3>Odontopediatría</h3>
+          <p>Atención amigable para niños con acompanamiento profesional y cercano.</p>
         </article>
       </div>
     </div>
@@ -83,24 +118,24 @@
   <section class="section reveal" id="equipo">
     <div class="container">
       <div class="section-head reveal">
-        <span class="badge">Equipo profesional</span>
-        <h2>Profesionales que acompanan cada tratamiento</h2>
+        <!--  <span class="badge">Equipo profesional</span> -->
+        <h2>Profesionales que acompañan cada tratamiento</h2>
       </div>
       <div class="team-grid">
         <article class="card reveal reveal-delay-1">
           <img class="doctor-photo doctor-photo-image" src="images/RodrigoLencina.png" alt="Dr Rodrigo Lencina">
           <h3>Dr Rodrigo Lencina</h3>
-          <p>Odontologia integral, ortodoncia y implantologia.</p>
+          <p>INSERTAR DESCRIPCIÓN</p>
         </article>
         <article class="card reveal reveal-delay-2">
           <div class="doctor-photo"></div>
-          <h3>Dr. </h3>
-          <p>Ortodoncia y diseno de sonrisa.</p>
+          <h3>Dr. X</h3>
+          <p>INSERTAR DESCRIPCIÓN</p>
         </article>
         <article class="card reveal reveal-delay-3">
           <div class="doctor-photo"></div>
           <h3>Dra. L</h3>
-          <p>Odontopediatria y atencion preventiva.</p>
+          <p>INSERTAR DESCRIPCIÓN</p>
         </article>
       </div>
     </div>
@@ -108,42 +143,39 @@
 
   <section class="section reveal" id="contacto">
     <div class="container contact-stack">
-      <article class="card reveal reveal-delay-1 contact-card">
-        <h3>Contacto y turnos</h3>
-        <ul class="contact-list">
+      <div class="section-head reveal reveal-delay-1 contact-card is-visible">
+        <h2>Contactános</h2>
+        <h3>De Lunes a Viernes de 8:00 a 12:00 y 16:00 a 20:00</h3>
+        <!--   <ul class="contact-list">
           <li><strong>Direccion:</strong>Av. Gral. Roca 1599, San Miguel de Tucumán, Tucumán, Argentina</li>
-          <li><strong>Maps:</strong> <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Av.+Gral.+Roca+1599,+San+Miguel+de+Tucuman,+Tucuman,+Argentina">Ver ubicacion en Google Maps</a></li>
+          <li><strong>Maps:</strong> <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Av.+Gral.+Roca+1599,+San+Miguel+de+Tucuman,+Tucuman,+Argentina">Ver ubicación en Google Maps</a></li>
           <li><strong>Telefono:</strong> (0381) 232-2272</li>
           <li><strong>WhatsApp:</strong> +54 9 3815 31-6345</li>
           <li><strong>Email:</strong> contacto@codil.com.ar</li>
           <li><strong>Horario:</strong> Lun a Vie de 8:00 a 12:00 y 16:00 a 20:00</li>
-        </ul>
+        </ul> -->
         <div class="cta">
           <div>
             <h3>Solicita tu turno hoy</h3>
-            <p>Respuesta rapida por WhatsApp y telefono.</p>
+            <p>Respuesta rapida por WhatsApp y teléfono.</p>
           </div>
-          <a
-            href="https://wa.me/5493815316345?text=Hola%20CODIL%2C%20quiero%20consultar%20por%20un%20turno."
-            class="btn btn-outline whatsapp-btn"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a href="https://wa.me/5493815316345?text=Hola%20CODIL%2C%20quiero%20consultar%20por%20un%20turno."
+            class="btn btn-outline whatsapp-btn" target="_blank" rel="noopener noreferrer"
             aria-label="Contactar por WhatsApp">
             <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-              <path fill="#25D366" d="M16.01 3.2c-7.08 0-12.8 5.72-12.8 12.78 0 2.26.6 4.46 1.72 6.4L3.1 28.8l6.57-1.75a12.8 12.8 0 0 0 6.34 1.7h.01c7.06 0 12.78-5.72 12.78-12.8 0-3.43-1.34-6.66-3.76-9.08A12.73 12.73 0 0 0 16 3.2Z"/>
-              <path fill="#fff" d="M23.42 19.15c-.4-.2-2.34-1.16-2.7-1.29-.36-.13-.62-.2-.88.2-.26.4-1 1.29-1.23 1.56-.22.26-.45.3-.84.1-.4-.2-1.67-.62-3.18-1.97-1.18-1.06-1.98-2.37-2.2-2.77-.23-.4-.02-.61.17-.81.17-.17.4-.45.6-.68.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.88-2.13-1.2-2.92-.31-.75-.63-.65-.88-.66h-.75c-.27 0-.7.1-1.06.5-.36.4-1.39 1.36-1.39 3.33 0 1.96 1.42 3.86 1.62 4.12.2.27 2.8 4.27 6.79 5.98.95.41 1.69.65 2.27.83.95.3 1.81.26 2.49.16.76-.11 2.34-.95 2.67-1.87.33-.92.33-1.7.23-1.87-.1-.16-.36-.26-.75-.46Z"/>
+              <path fill="#25D366"
+                d="M16.01 3.2c-7.08 0-12.8 5.72-12.8 12.78 0 2.26.6 4.46 1.72 6.4L3.1 28.8l6.57-1.75a12.8 12.8 0 0 0 6.34 1.7h.01c7.06 0 12.78-5.72 12.78-12.8 0-3.43-1.34-6.66-3.76-9.08A12.73 12.73 0 0 0 16 3.2Z" />
+              <path fill="#fff"
+                d="M23.42 19.15c-.4-.2-2.34-1.16-2.7-1.29-.36-.13-.62-.2-.88.2-.26.4-1 1.29-1.23 1.56-.22.26-.45.3-.84.1-.4-.2-1.67-.62-3.18-1.97-1.18-1.06-1.98-2.37-2.2-2.77-.23-.4-.02-.61.17-.81.17-.17.4-.45.6-.68.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.88-2.13-1.2-2.92-.31-.75-.63-.65-.88-.66h-.75c-.27 0-.7.1-1.06.5-.36.4-1.39 1.36-1.39 3.33 0 1.96 1.42 3.86 1.62 4.12.2.27 2.8 4.27 6.79 5.98.95.41 1.69.65 2.27.83.95.3 1.81.26 2.49.16.76-.11 2.34-.95 2.67-1.87.33-.92.33-1.7.23-1.87-.1-.16-.36-.26-.75-.46Z" />
             </svg>
             Contactar ahora
           </a>
         </div>
-      </article>
+      </div>
       <div class="map-frame reveal reveal-delay-2">
-        <iframe
-          title="Ubicacion CODIL en Google Maps"
+        <iframe title="Ubicacion CODIL en Google Maps"
           src="https://maps.google.com/maps?q=Av.%20Gral.%20Roca%201599,%20San%20Miguel%20de%20Tucuman,%20Tucuman,%20Argentina&t=&z=16&ie=UTF8&iwloc=&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
         </iframe>
       </div>
     </div>
@@ -154,13 +186,17 @@
       <button id="close-obras-modal" class="modal-close" type="button" aria-label="Cerrar modal">x</button>
       <h3 id="obras-modal-title">Obras Sociales Principales</h3>
       <p>
-        Trabajamos con una amplia red de obras sociales y prepagas. A continuacion, se muestran las principales:
+        Trabajamos con una amplia red de obras sociales y prepagas. A continuación, se muestran las principales:
       </p>
       <div class="insurance-grid">
-        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/ipsst.png" alt="Logo IPSST"><span>Subsidio de Salud</span></div>
-        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/sancor.png" alt="Logo Sancor Salud"><span>Sancor Salud</span></div>
-        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/ospe.jpg" alt="Logo OSPE"><span>OSPE</span></div>
-        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/swiss.png" alt="Logo Swiss Medical"><span>Swiss Medical</span></div>
+        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/ipsst.png"
+            alt="Logo IPSST"><span>Subsidio de Salud</span></div>
+        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/sancor.png"
+            alt="Logo Sancor Salud"><span>Sancor Salud</span></div>
+        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/ospe.jpg"
+            alt="Logo OSPE"><span>OSPE</span></div>
+        <div class="insurance-item"><img class="insurance-logo-img" src="images/obrasSociales/swiss.png"
+            alt="Logo Swiss Medical"><span>Swiss Medical</span></div>
         <div class="insurance-item"><span class="insurance-logo">OG</span><span>OSSEG</span></div>
         <div class="insurance-item"><span class="insurance-logo">+</span><span>Prepagas varias</span></div>
       </div>
@@ -173,6 +209,46 @@
       <a class="footer-brand" href="#inicio" aria-label="CODIL Inicio">
         <img src="images/codil_logo1.png" alt="Logo CODIL">
       </a>
+      <div class="contact-list">     
+          <div class="contact-data">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fcfcfc" viewBox="0 0 256 256">
+              <path
+                d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+              </path>
+            </svg>
+            <a class="map-link" target="_blank" rel="noopener noreferrer"
+              href="https://www.google.com/maps/search/?api=1&query=Av.+Gral.+Roca+1599,+San+Miguel+de+Tucuman,+Tucuman,+Argentina">
+              Gral. Roca 1599, San Miguel de Tucumán, Tucumán, Argentina</a>
+          </div>
+          <div class="contact-data">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fcfcfc" viewBox="0 0 256 256">
+              <path
+                d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z">
+              </path>
+            </svg>
+            <a href="tel:+543812322272">+54 9 381 232-2272</a>
+          </div>
+          <div class="contact-data">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fcfcfc" viewBox="0 0 256 256">
+              <path
+                d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z">
+              </path>
+            </svg>
+            <a href="https://wa.me/543815316345" target="_blank">
+              +54 9 3815 31-6345
+            </a>
+          </div>
+          <div class="contact-data">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fcfcfc" viewBox="0 0 256 256">
+              <path
+                d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z">
+              </path>
+            </svg>
+            <a href="mailto:correo@ejemplo.com">
+              contacto@codil.com.ar</a>
+        </div>
+      </div>
+
       <nav class="footer-nav" aria-label="Navegacion footer">
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
@@ -181,26 +257,34 @@
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="footer-social" aria-label="Redes sociales">
-        <a class="social-icon" href="https://wa.me/5493815316345?text=Hola%20CODIL%2C%20quiero%20consultar%20por%20un%20turno." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp CODIL">
+        <a class="social-icon"
+          href="https://wa.me/5493815316345?text=Hola%20CODIL%2C%20quiero%20consultar%20por%20un%20turno."
+          target="_blank" rel="noopener noreferrer" aria-label="WhatsApp CODIL">
           <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M16.01 3.2c-7.08 0-12.8 5.72-12.8 12.78 0 2.26.6 4.46 1.72 6.4L3.1 28.8l6.57-1.75a12.8 12.8 0 0 0 6.34 1.7h.01c7.06 0 12.78-5.72 12.78-12.8 0-3.43-1.34-6.66-3.76-9.08A12.73 12.73 0 0 0 16 3.2Z"/>
-            <path fill="#141414" d="M23.42 19.15c-.4-.2-2.34-1.16-2.7-1.29-.36-.13-.62-.2-.88.2-.26.4-1 1.29-1.23 1.56-.22.26-.45.3-.84.1-.4-.2-1.67-.62-3.18-1.97-1.18-1.06-1.98-2.37-2.2-2.77-.23-.4-.02-.61.17-.81.17-.17.4-.45.6-.68.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.88-2.13-1.2-2.92-.31-.75-.63-.65-.88-.66h-.75c-.27 0-.7.1-1.06.5-.36.4-1.39 1.36-1.39 3.33 0 1.96 1.42 3.86 1.62 4.12.2.27 2.8 4.27 6.79 5.98.95.41 1.69.65 2.27.83.95.3 1.81.26 2.49.16.76-.11 2.34-.95 2.67-1.87.33-.92.33-1.7.23-1.87-.1-.16-.36-.26-.75-.46Z"/>
+            <path fill="currentColor"
+              d="M16.01 3.2c-7.08 0-12.8 5.72-12.8 12.78 0 2.26.6 4.46 1.72 6.4L3.1 28.8l6.57-1.75a12.8 12.8 0 0 0 6.34 1.7h.01c7.06 0 12.78-5.72 12.78-12.8 0-3.43-1.34-6.66-3.76-9.08A12.73 12.73 0 0 0 16 3.2Z" />
+            <path fill="#141414"
+              d="M23.42 19.15c-.4-.2-2.34-1.16-2.7-1.29-.36-.13-.62-.2-.88.2-.26.4-1 1.29-1.23 1.56-.22.26-.45.3-.84.1-.4-.2-1.67-.62-3.18-1.97-1.18-1.06-1.98-2.37-2.2-2.77-.23-.4-.02-.61.17-.81.17-.17.4-.45.6-.68.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.88-2.13-1.2-2.92-.31-.75-.63-.65-.88-.66h-.75c-.27 0-.7.1-1.06.5-.36.4-1.39 1.36-1.39 3.33 0 1.96 1.42 3.86 1.62 4.12.2.27 2.8 4.27 6.79 5.98.95.41 1.69.65 2.27.83.95.3 1.81.26 2.49.16.76-.11 2.34-.95 2.67-1.87.33-.92.33-1.7.23-1.87-.1-.16-.36-.26-.75-.46Z" />
           </svg>
         </a>
-        <a class="social-icon" href="https://www.facebook.com/CODILTUC" target="_blank" rel="noopener noreferrer" aria-label="Facebook CODIL">
+        <a class="social-icon" href="https://www.facebook.com/CODILTUC" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook CODIL">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.02 10.13 11.93v-8.43H7.08v-3.5h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.98h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.33l-.53 3.5h-2.8V24C19.61 23.09 24 18.1 24 12.07Z"/>
+            <path fill="currentColor"
+              d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.02 10.13 11.93v-8.43H7.08v-3.5h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.98h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.33l-.53 3.5h-2.8V24C19.61 23.09 24 18.1 24 12.07Z" />
           </svg>
         </a>
-        <a class="social-icon" href="https://www.instagram.com/codiltuc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram CODIL">
+        <a class="social-icon" href="https://www.instagram.com/codiltuc/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram CODIL">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm-.2 1.9A3.65 3.65 0 0 0 3.9 7.55v8.9a3.65 3.65 0 0 0 3.65 3.65h8.9a3.65 3.65 0 0 0 3.65-3.65v-8.9a3.65 3.65 0 0 0-3.65-3.65h-8.9Zm9.65 1.45a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.9A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Z"/>
+            <path fill="currentColor"
+              d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm-.2 1.9A3.65 3.65 0 0 0 3.9 7.55v8.9a3.65 3.65 0 0 0 3.65 3.65h8.9a3.65 3.65 0 0 0 3.65-3.65v-8.9a3.65 3.65 0 0 0-3.65-3.65h-8.9Zm9.65 1.45a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.9A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Z" />
           </svg>
         </a>
       </div>
     </div>
   </footer>
-  <script src="js/header.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
